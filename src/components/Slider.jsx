@@ -21,7 +21,6 @@ const SliderNumber = ({ slides }) => {
                     duration: 25, 
                     repeat: Infinity,
                 }}
-
                 onDragStart={() => setIsDragging(true)}
                 onDragEnd={() => setIsDragging(false)}
             >
