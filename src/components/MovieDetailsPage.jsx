@@ -16,15 +16,9 @@ export default function MovieDetailsPage() {
 
     async function getMovieDetails() {
         setLoading(true);
-        const options = {
-            method: "GET",
-            headers: {
-                accept: "application/json",
-                Authorization: "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJkMzcxZTkyY2ZhNWFmMWUxZTVjYWVmMDQ3M2RhNzAzMSIsIm5iZiI6MTc3ODY0MzU0OS4yNTcsInN1YiI6IjZhMDNmMjVkM2M1MTU5ZWExNTdiY2I5NCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.q9grvhw4dXESGwCFEfcDX4w_EwMkG0X4gY4L0AlIIj8"
-            }
-        };
+    
 
-        fetch(`https://api.themoviedb.org/3/movie/${id}?language=en-US`, options)
+        fetch(`https://api.themoviedb.org/3/movie/${id}?language=en-US`, API_OPTIONS)
             .then((res) => res.json())
             .then((res) => {
                 setMovie(res);
